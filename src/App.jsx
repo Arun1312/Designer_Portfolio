@@ -5,7 +5,6 @@ function App() {
   const contentRef = useRef(null)
   const [showFooter, setShowFooter] = useState(false)
 
- 
   const figmaLinks = {
     eotWeb: 'https://www.figma.com/proto/ZD174yaF3u63abvXGZb82w/Untitled?node-id=0-1&t=mPW4CSemltjOY2he-1',
     eotApp: 'https://www.figma.com/proto/peJcelcPBj5pxW5oEu9vxZ/Untitled?node-id=0-1&t=jMdSBvgHQCIHVOJ6-1',
@@ -17,9 +16,7 @@ function App() {
     const el = contentRef.current
     if (!el) return
 
-    
     const isBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 10
-
     setShowFooter(isBottom)
   }
 
@@ -34,9 +31,9 @@ function App() {
   return (
     <div className="app-container">
       <div className="header">
-        <a href="https://www.linkedin.com/in/arun-singh-beniwal/">LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1Z1jKpKIB_pBgdXX7SuqNga45ybT9W00P/view?usp=sharing">Resume</a>
-        <a href="https://drive.google.com/drive/folders/1QKkqBENi6NiPdi5sUBKnFJZTdoq1mGmJ?usp=drive_link">Certification</a>
+        <a href="https://www.linkedin.com/in/arun-singh-beniwal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1Z1jKpKIB_pBgdXX7SuqNga45ybT9W00P/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="https://drive.google.com/drive/folders/1QKkqBENi6NiPdi5sUBKnFJZTdoq1mGmJ?usp=drive_link" target="_blank" rel="noopener noreferrer">Certification</a>
       </div>
 
       <div className="content" ref={contentRef}>
