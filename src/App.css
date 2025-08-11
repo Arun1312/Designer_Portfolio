@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, .app-container {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0a0a0c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #131415;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.header a:hover {
+  color: #1DA1F2;
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.content {
+  background-image: url('/images/3.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
+.line {
+  width: 175%;
+  height: 7px;
+  background-color: white;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    #0a0a0c 6px,
+    #0a0a0c 12px
+  );
+}
+
+.intro-container {
+  margin-top: 100px;
+  padding: 15px;
+  width: fit-content;
+}
+
+.intro-container h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 5.5rem;
+  color: white;
+  margin: 0;
+}
+
+.name {
+  color: white;
+}
+
+.highlight {
+  color: #ff6200;
+}
+
+.projects {
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
+  height: 250px;
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.image {
+  border-radius: 8px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.main-image {
+  width: 220px;
+  height: 150px;
+  background-image: url('/images/Main.png');
+}
+
+.onboarding-image,
+.patterns-image,
+.loginmenu-image {
+  width: 150px;
+  height: 220px;
+}
+
+.onboarding-image {
+  background-image: url('/images/Onboarding.jpg');
+}
+
+.patterns-image {
+  background-image: url('/images/Patterns.png');
+}
+
+.loginmenu-image {
+  background-image: url('/images/LoginMenu.png');
+}
+
+.vertical-line {
+  width: 2px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 0;
+  align-self: stretch;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50%;
+}
+
+.text-content h1 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: white;
+  align-self: flex-start;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Styled <a> tags as buttons */
+.figma-btn {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #ff6200, #ffb347);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 98, 0, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+}
+
+.figma-btn:hover {
+  background: linear-gradient(135deg, #ffb347, #ff6200);
+  box-shadow: 0 6px 20px rgba(255, 98, 0, 0.8);
+}
+
+/* Footer styles with scroll-triggered visibility */
+.footer {
+  background-color: red;
+  color: #0a0a0c;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+  user-select: none;
+  padding: 0 10px;
+
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, height 0.6s ease, padding 0.6s ease;
+}
+
+.footer.visible {
+  opacity: 1;
+  height: auto;
+  padding: 20px 10px;
+  overflow: visible;
+}
